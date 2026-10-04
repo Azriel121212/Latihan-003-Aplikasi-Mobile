@@ -10,7 +10,7 @@ Chaerul Azriel Ardiansyah - 1124160129
 * **BR-05:** Denda tiket hilang berlaku untuk semua jenis pelanggan (member maupun non-member) dan ditambahkan ke total akhir pembayaran.
 
 ````dart
-// BR-01
+// BR-03
 // Durasi parkir dihitung per jam, sisa menit dibulatkan ke atas
 int hitungDurasiJam(int menit) {
   if (menit <= 0) {
@@ -27,23 +27,22 @@ int hitungDurasiJam(int menit) {
   return jam;
 }
 
-// BR-02
-// Member bulanan gratis
-// Non-member tarif progresif (Misal: Jam pertama 5000, selanjutnya 2000)
+// BR-01: Member bulanan gratis
+// BR-02: Non-member tarif progresif (Misal: Jam pertama 5000, selanjutnya 2000)
 int hitungTarifParkir(String jenisMember, int durasiJam) {
   if (jenisMember == "member") {
-    return 0;
+    return 0; // Implementasi BR-01
   } else if (jenisMember == "non-member") {
     if (durasiJam <= 0) {
       return 0;
     }
-    return 5000 + ((durasiJam - 1) * 2000);
+    return 5000 + ((durasiJam - 1) * 2000); // Implementasi BR-02
   }
   
   return 0;
 }
 
-// BR-03
+// BR-04
 // Tiket hilang denda Rp20.000
 int hitungDenda(String statusTiket) {
   if (statusTiket == "hilang") {
@@ -52,7 +51,8 @@ int hitungDenda(String statusTiket) {
   return 0;
 }
 
-// Menghitung total pembayaran (Tarif Parkir + Denda jika ada)
+// BR-05
+// Denda tiket hilang ditambahkan ke total akhir pembayaran
 int hitungTotalBayar(int tarif, int denda) {
   return tarif + denda;
 }
