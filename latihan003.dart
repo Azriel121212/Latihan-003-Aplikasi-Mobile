@@ -17,7 +17,6 @@ int hitungDurasiJam(int menit) {
   return jam;
 }
 
-
 // BR-01:kalo Member bulanan gratis
 // BR-02:kalo Non-member tarif progresif contohnya: Jam pertama 5000 nah selanjutnya 2000 begitupun seterusnya
 int hitungTarifParkir(String jenisMember, int durasiJam) {
@@ -48,14 +47,12 @@ int hitungTotalBayar(int tarif, int denda) {
   return tarif + denda;
 }
 
-//TEST PROGRAM-------------------------------------------------------------------------
-
 void main() {
   print("Chaerul Azriel Ardinsyah");
   print("TI24PSE1");
   print("");
 
-  // Skenario 1
+  // Case 1
   // Menguji parkir member (Gratis)
   int durasiJam = hitungDurasiJam(120);
   int tarif = hitungTarifParkir("member", durasiJam);
@@ -70,7 +67,7 @@ void main() {
   print("");
 
 
-  // Skenario 2
+  // Case 2
   // Menguji parkir non-member 45 menit dibulatkan jadi 1 jam
   durasiJam = hitungDurasiJam(45);
   tarif = hitungTarifParkir("non-member", durasiJam);
@@ -84,8 +81,7 @@ void main() {
   print("Total Bayar: Rp$total");
   print("");
   
-
-  // Skenario 3
+  // Case 3
   // Menguji parkir non-member 3 jam secara Progresif
   durasiJam = hitungDurasiJam(180);
   tarif = hitungTarifParkir("non-member", durasiJam);
@@ -99,8 +95,7 @@ void main() {
   print("Total Bayar: Rp$total");
   print("");
 
-
-  // Skenario 4
+  // Case 4
   // Menguji kondisi member tapi tiketnya hilang (Kena denda dikit)
   durasiJam = hitungDurasiJam(60);
   tarif = hitungTarifParkir("member", durasiJam);
@@ -114,8 +109,7 @@ void main() {
   print("Total Bayar: Rp$total");
   print("");
 
-
-  // Skenario 5
+  // Case 5
   // Menguji non-member tiket hilang dikenakan tarif dan denda
   durasiJam = hitungDurasiJam(60);
   tarif = hitungTarifParkir("non-member", durasiJam);
