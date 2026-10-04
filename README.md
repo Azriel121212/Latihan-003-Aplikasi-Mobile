@@ -33,7 +33,7 @@ int hitungDurasiJam(int menit) {
 // BR-02:kalo Non-member tarif progresif contohnya: Jam pertama 5000 nah selanjutnya 2000 begitupun seterusnya
 int hitungTarifParkir(String jenisMember, int durasiJam) {
   if (jenisMember == "member") {
-    return 0; // Implementasi BR-01
+    return 0;
   } else if (jenisMember == "non-member") {
     if (durasiJam <= 0) {
       return 0;
