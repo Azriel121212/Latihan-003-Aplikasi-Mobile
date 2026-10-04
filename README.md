@@ -3,7 +3,7 @@ Chaerul Azriel Ardiansyah - 1124160129
 
 ## Business Rules
 
-* **BR-01:** Kendaraan dengan status member bulanan digratiskan dari biaya parkir (tarif Rp0).
+* **BR-01:** Kendaraan dengan status member bulanan gratis biaya parkir).
 * **BR-02:** Kendaraan non-member dikenakan tarif parkir progresif (Rp5.000 jam pertama, Rp2.000 jam berikutnya).
 * **BR-03:** Durasi parkir dihitung dalam satuan jam, di mana sisa menit dibulatkan ke atas menjadi 1 jam penuh.
 * **BR-04:** Jika tiket parkir hilang, maka dikenakan denda sebesar Rp20.000.
